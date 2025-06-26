@@ -11,6 +11,7 @@
 
 ## Estructura del proyecto
 
+```
 /phpApi
 │
 ├── config/ # Conexion a base de datos
@@ -39,3 +40,4 @@
 │
 ├── index.php # Router principal
 └── .htaccess # Reescritura de URLs si se usa Apache
+```
