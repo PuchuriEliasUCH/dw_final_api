@@ -1,5 +1,10 @@
 <?php
 require_once(__DIR__ . '/../config/database.php');
+require_once(__DIR__ . '/../models/Donacion.php');
+require_once(__DIR__ . '/../models/Necesidad.php');
+require_once(__DIR__ . '/../utils/Response.php');
+require_once(__DIR__ . '/../utils/Auth.php'); 
+
 class DonacionController {
     private $db;
     private $donacion;
