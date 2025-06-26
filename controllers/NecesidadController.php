@@ -1,5 +1,9 @@
 <?php
 require_once(__DIR__ . '/../config/database.php');
+require_once(__DIR__ . '/../models/Necesidad.php');
+require_once(__DIR__ . '/../utils/Response.php');
+require_once(__DIR__ . '/../utils/Auth.php'); 
+
 class NecesidadController {
     private $db;
     private $necesidad;
@@ -8,6 +12,15 @@ class NecesidadController {
         $database = new Database();
         $this->db = $database->connect();
         $this->necesidad = new Necesidad($this->db);
+    }
+
+    public function getCardView() {
+        $necesidades = $this->necesidad->getCardView();
+        if($necesidades){
+            Response::success($necesidades);
+        } else {
+            Response::error('No se encontraron necesidades', 404);
+        }
     }
 
     public function getAll() {

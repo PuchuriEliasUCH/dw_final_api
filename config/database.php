@@ -9,10 +9,15 @@ class Database
 
     public function __construct()
     {
-        $this->host = getenv('MYSQL_ADDON_HOST');
-        $this->database = getenv('MYSQL_ADDON_DB');
-        $this->username = getenv('MYSQL_ADDON_USER');
-        $this->password = getenv('MYSQL_ADDON_PASSWORD');
+        $this->host = 'localhost';
+        $this->database = 'pruebas2';
+        $this->username = 'root';
+        $this->password = 'admin';
+
+        // $this->host = getenv('MYSQL_ADDON_HOST');
+        // $this->database = getenv('MYSQL_ADDON_DB');
+        // $this->username = getenv('MYSQL_ADDON_USER');
+        // $this->password = getenv('MYSQL_ADDON_PASSWORD');
     }
 
     public function connect()

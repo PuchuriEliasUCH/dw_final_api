@@ -61,6 +61,11 @@ try {
             break;
 
         // NECESIDADES ROUTES
+        case $path === '/necesidades/card' && $request_method === 'GET':
+            $controller = new NecesidadController();
+            $controller->getCardView();
+            break;
+
         case $path === '/necesidades' && $request_method === 'GET':
             $controller = new NecesidadController();
             $controller->getAll();

@@ -83,5 +83,15 @@ class Necesidad {
         
         return $stmt->execute();
     }
+
+    public function getCardView(){
+        $query = "SELECT * from view_necesidad_card";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return [];
+    }
 }
 ?>

@@ -1,5 +1,11 @@
 <?php
 require_once(__DIR__ . '/../config/database.php');
+require_once(__DIR__ . '/../models/Usuario.php');
+require_once(__DIR__ . '/../models/Donante.php');
+require_once(__DIR__ . '/../models/Organizacion.php');
+require_once(__DIR__ . '/../utils/Response.php');
+require_once(__DIR__ . '/../utils/Auth.php'); 
+
 class AuthController {
     private $db;
     private $usuario;
