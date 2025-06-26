@@ -6,7 +6,7 @@ ini_set('session.cookie_secure', 0); // Cambiar a 1 en HTTPS
 session_name('DONATION_API_SESSION');
 
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: http://localhost:3000'); // Especificar origen exacto
+header('Access-Control-Allow-Origin: https://solidaridapp.free.nf'); // Especificar origen exacto
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Credentials: true'); // Importante para sesiones
