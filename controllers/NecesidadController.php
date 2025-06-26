@@ -1,5 +1,5 @@
 <?php
-// controllers/NecesidadController.php
+require_once(__DIR__ . '/../config/database.php');
 class NecesidadController {
     private $db;
     private $necesidad;
